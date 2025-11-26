@@ -186,14 +186,14 @@ a:hover {
   background: #e5e7eb;
 }
 
-/* Image inside the circle */
 .photo-circle img {
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
+  display: block;
   object-position: 50% 20%;
 }
+
 
 
 .about-text h2 {
