@@ -120,12 +120,22 @@
             adapt the framework to new data sets and applications.
           </p>
 
-          <h3>6. Applications and Student Focused Projects</h3>
+                    <h3>6. Applications and Student Projects</h3>
           <p>
             I apply these models to realistic event data sets, comparing oscillatory and classical
-            Hawkes models by fit and predictive performance. I also design case studies that can
-            be used for undergraduate projects or capstone experiences where students learn both
-            the probabilistic ideas and the computational workflow for event data.
+            Hawkes models by fit, predictive performance, and interpretability. A typical project
+            cycle begins with a rigorous probabilistic formulation, continues with careful
+            computation and simulation in R and C plus plus, and finishes with an application to
+            real data where the model assumptions are checked and refined.
+          </p>
+          <p>
+            This structure supports a range of projects for both undergraduate and graduate
+            students. At the introductory level, students explore self exciting behavior through
+            simulation and visualization. At the intermediate level, students fit and critique
+            models for real event data, learning how theory guides practical choices. At the
+            advanced level, graduate students can work on individual pieces of the theoretical
+            or computational program, such as proving specific limit results for a family of
+            kernels or implementing and benchmarking new estimation routines.
           </p>
         </div>
       </div>
@@ -135,21 +145,42 @@
       <div class="container">
         <div class="card">
           <h2>Future Directions</h2>
+          <p>
+            My long term research plan is to deepen the theory of Hawkes type models and to place
+            them in a broader landscape of stochastic processes that describe event driven and
+            continuous time phenomena. The guiding principle is to move repeatedly through a
+            cycle of rigorous theory, efficient computation, and validation on real systems.
+          </p>
           <ul>
-            <li>Multivariate and marked oscillatory Hawkes processes with interpretable cross effects.</li>
-            <li>Diagnostic tools and visual summaries that help practitioners assess model fit.</li>
             <li>
-              Connections between Hawkes type models and other time series or point process
-              frameworks, such as renewal processes and generalized linear models.
+              Develop sharper probabilistic results for oscillatory Hawkes processes, including
+              limit theorems, rates of mixing, and refined stability and approximation properties.
             </li>
             <li>
-              Open source software that integrates teaching materials, reproducible examples, and
-              flexible model specification.
+              Study efficiency and robustness of inference procedures, such as likelihood based,
+              moment based, and semiparametric methods, with a focus on finite sample performance
+              for realistically sized data sets.
+            </li>
+            <li>
+              Extend the framework to multivariate, spatial, and marked settings where Hawkes
+              dynamics interact with other stochastic structures, for example queueing models,
+              renewal processes, or diffusions driven by self exciting intensities.
+            </li>
+            <li>
+              Explore related classes of stochastic processes that share some features with
+              Hawkes models, such as self correcting and inhibitory processes, and understand
+              when each family is most appropriate for modeling a given system.
+            </li>
+            <li>
+              Build open source software that implements these ideas in a modular way, so that
+              both researchers and students can experiment with new kernels, estimators, and
+              diagnostics without rebuilding the core tools from scratch.
             </li>
           </ul>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
