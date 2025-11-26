@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research - Tekendra Bhatt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="site-title">Research</h1>
+        <p class="site-subtitle">Probability · Stochastic Processes · Event Data</p>
+      </div>
+      <div class="header-contact">
+        <a href="index.html#about" class="link-inline">← Back to home</a>
+      </div>
+    </div>
+
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="research.html" class="nav-link active">Research</a>
+        <a href="teaching.html" class="nav-link">Teaching</a>
+        <a href="index.html#awards" class="nav-link">Awards</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Research Areas</h2>
+          <p>
+            My work lies in probability, stochastic processes, and statistical inference with
+            a focus on self exciting point processes. I am especially interested in models that
+            describe how events accumulate in time when each event can trigger further activity.
+          </p>
+          <ul>
+            <li>Hawkes type and self exciting point processes</li>
+            <li>Oscillatory and non monotone excitation kernels</li>
+            <li>Stability, ergodicity, and asymptotic theory</li>
+            <li>Likelihood based inference and Fisher information</li>
+            <li>Simulation, optimization, and reproducible computation in R and C++</li>
+            <li>Applications in finance, reliability, neuroscience, and social data</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="card">
+          <h2>Hawkes Processes and Their Limitations</h2>
+          <p>
+            Hawkes processes model events that tend to cluster in time. Each event increases the
+            future intensity through a kernel function. This simple idea has made Hawkes models
+            a standard tool for high frequency events in many fields.
+          </p>
+          <p>
+            Classical models usually impose kernels that are positive and decaying. This captures
+            basic self excitation but prevents behavior such as rebounds, damped oscillations, or
+            temporary suppression followed by recovery. Data from financial markets, biological
+            systems, and social activity often show patterns that are richer than monotone decay.
+          </p>
+          <p>
+            In addition, inference for extended kernels can be fragile if one works without a
+            firm theoretical foundation. Questions of stability, identifiability, and
+            asymptotics become more delicate once the kernel changes shape.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <h2>My Contributions</h2>
+
+          <h3>1. Oscillatory and Damped Excitation Kernels</h3>
+          <p>
+            I construct families of kernels that produce oscillatory or rebound behavior while
+            preserving the branching interpretation that makes Hawkes processes intuitive.
+            Classical monotone kernels appear as special cases inside a larger family. This
+            allows data driven comparison between simple and more expressive models.
+          </p>
+
+          <h3>2. Structural Assumptions and Stability</h3>
+          <p>
+            To ensure that the intensity process remains well behaved, I develop structural
+            conditions that guarantee stability, boundedness, and ergodicity. These conditions
+            are stated in a way that covers both monotone and oscillatory kernels, which keeps
+            the theory unified and usable in practice.
+          </p>
+
+          <h3>3. Maximum Likelihood and Asymptotic Theory</h3>
+          <p>
+            I study maximum likelihood estimators for these extended Hawkes models and show that,
+            under appropriate conditions, they are consistent and asymptotically normal. The
+            argument combines uniform convergence of the log likelihood with ergodic properties
+            of the intensity process. This creates a solid justification for likelihood based
+            estimation in models that go beyond the classical setting.
+          </p>
+
+          <h3>4. Moments, Covariances, and Fisher Information</h3>
+          <p>
+            I derive analytic expressions or accurate approximations for means, covariance
+            functions, and Fisher information matrices. These formulas provide insight into how
+            parameters influence variability and dependence, and they lead to practical standard
+            errors and diagnostic tools.
+          </p>
+
+          <h3>5. Computational Tools in R and Rcpp</h3>
+          <p>
+            I implement simulation, likelihood evaluation, gradient based optimization, and
+            diagnostic plots in R with performance critical components in C++ using Rcpp. The
+            code is organized to be modular and reproducible, making it easier for others to
+            adapt the framework to new data sets and applications.
+          </p>
+
+          <h3>6. Applications and Student Focused Projects</h3>
+          <p>
+            I apply these models to realistic event data sets, comparing oscillatory and classical
+            Hawkes models by fit and predictive performance. I also design case studies that can
+            be used for undergraduate projects or capstone experiences where students learn both
+            the probabilistic ideas and the computational workflow for event data.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="card">
+          <h2>Future Directions</h2>
+          <ul>
+            <li>Multivariate and marked oscillatory Hawkes processes with interpretable cross effects.</li>
+            <li>Diagnostic tools and visual summaries that help practitioners assess model fit.</li>
+            <li>
+              Connections between Hawkes type models and other time series or point process
+              frameworks, such as renewal processes and generalized linear models.
+            </li>
+            <li>
+              Open source software that integrates teaching materials, reproducible examples, and
+              flexible model specification.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Tekendra Bhatt</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
