@@ -1,165 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tekendra Bhatt - Applied Mathematics & Statistics</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .section-title {
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        /* Style for the sticky nav to have a backdrop blur */
-        .sticky-nav {
-            position: sticky;
-            top: 1rem;
-            z-index: 10;
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Tekendra Bhatt - Mathematician</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-    <div class="container mx-auto max-w-4xl p-6 md:p-12">
-
-        <!-- Header Section -->
-        <header class="flex flex-col md:flex-row items-start md:items-center justify-between mb-10">
-            <div>
-                <h1 class="text-4xl font-bold text-gray-900">Tekendra Bhatt</h1>
-                <p class="text-xl text-gray-600 mt-1">Ph.D. Candidate in Mathematics, University of North Texas</p>
-                <p class="text-md text-gray-500">(Expected Spring 2026)</p>
-            </div>
-            <div class="text-left md:text-right mt-4 md:mt-0 space-y-1">
-                <a href="mailto:tekendrabhatt@my.unt.edu" class="block text-blue-600 hover:underline">tekendrabhatt@my.unt.edu</a>
-                <a href="https://github.com/tekendra-bhatt" class="block text-blue-600 hover:underline">GitHub Profile</a>
-                <a href="[YOUR GOOGLE SCHOLAR URL]" class="block text-blue-600 hover:underline">Google Scholar</a>
-            </div>
-        </header>
-
-        <!-- Navigation -->
-        <nav class="rounded-lg shadow-sm p-4 mb-12 sticky-nav">
-            <ul class="flex justify-center flex-wrap gap-4 md:gap-8">
-                <li><a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a></li>
-                <li><a href="#research" class="text-gray-700 hover:text-blue-600 font-medium">Research</a></li>
-                <li><a href="#teaching" class="text-gray-700 hover:text-blue-600 font-medium">Teaching</a></li>
-                <li><a href="#awards" class="text-gray-700 hover:text-blue-600 font-medium">Awards</a></li>
-                <li><a href="CV.pdf" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Download CV</a></li>
-            </ul>
-        </nav>
-
-        <main>
-            <!-- About Section -->
-            <section id="about" class="mb-16 scroll-mt-24">
-                <h2 class="text-2xl font-bold section-title">About Me</h2>
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <img src="github-photo.jpg" alt="Tekendra Bhatt" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-md flex-shrink-0">
-                    <div class="text-lg leading-relaxed">
-                        <p>I am a Ph.D. candidate in Mathematics at the University of North Texas with research interests in applied probability, stochastic processes, and statistical inference. My work asks a simple question: <span class="font-semibold text-gray-900">how do past events change the chance of future events?</span></p>
-                        <p class="mt-4">From financial trades to seismic aftershocks, events often trigger more events. My research focuses on developing new classes of Hawkes processes to better model this self-exciting behavior, particularly when it contains rhythmic or cyclical patterns that classical models miss. My goal is to create frameworks that are theoretically rigorous, computationally efficient, and practically interpretable.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Research Section -->
-            <section id="research" class="mb-16 scroll-mt-24">
-                <h2 class="text-2xl font-bold section-title">Research</h2>
-                <div class="space-y-8">
-                    <div class="bg-white rounded-lg shadow-sm p-6">
-                        <h3 class="text-xl font-semibold text-gray-900">Dissertation: An Oscillatory Kernel for Hawkes Processes</h3>
-                        <p class="mt-2 text-lg leading-relaxed">
-                            My dissertation introduces an oscillatory, exponentially decaying kernel for Hawkes processes. This model nests the classical exponential case but can also represent periodic or quasi-periodic effects. The primary contributions of this work are:
-                        </p>
-                        <ul class="list-disc list-inside mt-4 space-y-2 text-lg">
-                            <li><span class="font-semibold">Moment Theory:</span> Developed a toolkit to derive closed-form expressions for the first four moments and a recipe for higher orders.</li>
-                            <li><span class="font-semibold">Inference & Asymptotics:</span> Proved consistency and asymptotic normality of the MLE and derived a closed-form approximation of the Fisher Information Matrix for accurate uncertainty estimates.</li>
-                            <li><span class="font-semibold">Computation & Validation:</span> Implemented fast simulation and exact likelihood maximization in R/Rcpp, validating the theory with extensive Monte Carlo studies.</li>
-                            <li><span class="font-semibold">Applications:</span> Currently applying the framework to real-world data from finance and seismology to demonstrate its predictive power.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white rounded-lg shadow-sm p-6">
-                        <h3 class="text-xl font-semibold text-gray-900">Publications & Preprints</h3>
-                        <div class="mt-4">
-                            <p class="font-medium text-gray-800">"An Oscillatory - Exponential Kernel for Hawkes Processes: Theory and Inference"</p>
-                            <p class="text-gray-600">Tekendra Bhatt. (In Preparation). To be submitted before Ph.D. defense.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow-sm p-6">
-                        <h3 class="text-xl font-semibold text-gray-900">Future Research Agenda</h3>
-                        <ul class="list-disc list-inside mt-4 space-y-2 text-lg">
-                            <li><span class="font-semibold">Multivariate Extensions:</span> Extend the oscillatory kernel to multivariate and network Hawkes processes to model interactions with phase lags.</li>
-                            <li><span class="font-semibold">Open-Source Software:</span> Release and maintain an R package for simulation, inference, and diagnostics of the model.</li>
-                            <li><span class="font-semibold">Model Generalization:</span> Explore nonparametric and marked Hawkes processes to allow for richer, data-driven oscillatory interactions.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Teaching Section -->
-            <section id="teaching" class="mb-16 scroll-mt-24">
-                <h2 class="text-2xl font-bold section-title">Teaching</h2>
-                <div class="space-y-6">
-                    <div class="bg-white rounded-lg shadow-sm p-6">
-                        <h3 class="text-xl font-semibold text-gray-900">Teaching Philosophy: Clarity, Action, and Care</h3>
-                        <p class="mt-2 text-lg leading-relaxed">With two decades of teaching experience from Nepal to the University of North Texas, my philosophy is built on three principles. I believe in <span class="font-semibold">Clarity</span> to move from intuition to formal understanding, <span class="font-semibold">Action</span> to ensure students learn by doing, and <span class="font-semibold">Care</span> to create an inclusive community where every student feels seen and supported. My goal is for students to leave my classroom not just with new skills, but with a deeper belief in their own capability to master mathematics.</p>
-                        <p class="mt-4 text-lg italic text-gray-700">"After a student scored 54% on a quiz, we created a two-week plan with short practice sessions. By the next quiz, their score rose to 76%, and by the midterm, it was 84%. This student's hard work, combined with targeted support, proved they could master the material."</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-sm p-6">
-                        <h3 class="text-xl font-semibold text-gray-900">Teaching Experience</h3>
-                        <p class="mt-2 text-lg leading-relaxed font-semibold">Courses Taught:</p>
-                        <ul class="list-disc list-inside text-lg">
-                            <li>UNT (Instructor of Record): Business Calculus, Pre-Calculus</li>
-                            <li>Far-Western University: Calculus, Differential Equations, Business Mathematics, Real Analysis, Topology, Linear Algebra, Basic Statistics</li>
-                        </ul>
-                        <p class="mt-4 text-lg leading-relaxed font-semibold">Prepared to Teach a Broad Range of Courses, Including:</p>
-                        <ul class="list-disc list-inside text-lg">
-                            <li>Probability, Mathematical Statistics, Stochastic Processes, Time Series, Statistical Computing in R</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-             <!-- Awards Section -->
-            <section id="awards" class="mb-16 scroll-mt-24">
-                <h2 class="text-2xl font-bold section-title">Awards & Honors</h2>
-                <div class="bg-white rounded-lg shadow-sm p-6">
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Outstanding Teaching Fellow Award (2023)</h3>
-                                <p class="text-gray-600">Department of Mathematics, University of North Texas</p>
-                            </div>
-                        </li>
-                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Academic Excellence Award (2022)</h3>
-                                <p class="text-gray-600">Department of Mathematics, University of North Texas</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-        </main>
-        
-        <!-- Footer -->
-        <footer class="text-center pt-8 mt-12 border-t">
-            <p class="text-gray-500">&copy; 2026 Tekendra Bhatt</p>
-        </footer>
-
+<body>
+  <!-- Top header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="site-title">Tekendra Bhatt</h1>
+        <p class="site-subtitle">Ph.D. Candidate in Mathematics · Applied Probability · Stochastic Processes</p>
+      </div>
+      <div class="header-contact">
+        <a href="mailto:tekendrabhatt@my.unt.edu" class="link-inline">tekendrabhatt@my.unt.edu</a>
+        <a href="https://github.com/tekendrabhatt" target="_blank" rel="noopener" class="link-inline">
+          GitHub Profile
+        </a>
+        <a href="https://scholar.google.com" target="_blank" rel="noopener" class="link-inline">
+          Google Scholar
+        </a>
+        <a href="assets/pdfs/Tekendra_Bhatt_CV.pdf" class="btn-primary" target="_blank" rel="noopener">
+          Download CV
+        </a>
+      </div>
     </div>
 
+    <!-- Navigation -->
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="teaching.html" class="nav-link">Teaching</a>
+        <a href="#awards" class="nav-link">Awards</a>
+        <a href="#highlights" class="nav-link">Highlights</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-photo">
+            <!-- Optional profile image -->
+            <div class="photo-circle">
+              <img src="assets/img/profile.jpg" alt="Photo of Tekendra Bhatt">
+            </div>
+          </div>
+          <div class="about-text card">
+            <h2>About Me</h2>
+            <p>
+              I am a mathematician specializing in applied probability, stochastic processes,
+              and statistical inference. My research centers on self exciting point processes
+              that model how past events change the chance of future events, with a particular focus
+              on Hawkes type models that capture rhythmic or oscillatory clustering.
+            </p>
+            <p>
+              I enjoy working at the interface of theory, computation, and applications. On the
+              theoretical side I study stability, ergodicity, and asymptotic properties of
+              stochastic processes that underlie likelihood based inference. On the computational
+              side I design efficient simulation and estimation algorithms in R and C++ through
+              Rcpp, with careful attention to reproducibility and diagnostic tools that make
+              models usable by others.
+            </p>
+            <p>
+              Teaching and mentoring are equally important parts of my professional identity.
+              I have substantial experience with gateway courses such as precalculus and
+              calculus, as well as proof based and probability oriented courses. My classroom
+              approach combines clear structure, active learning, and inclusive practices that
+              support students from a wide range of backgrounds.
+            </p>
+            <p class="about-summary">
+              I am actively seeking positions where I can contribute as a teacher scholar in
+              mathematics, build an accessible research program in stochastic processes and
+              event data, and involve undergraduates in meaningful projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick professional snapshot / Highlights -->
+    <section id="highlights" class="section section-muted">
+      <div class="container">
+        <h2>Professional Snapshot</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Research Profile</h3>
+            <ul class="tight-list">
+              <li>Self exciting and Hawkes type point processes</li>
+              <li>Oscillatory and non monotone excitation kernels</li>
+              <li>Theory of stability, ergodicity, and asymptotics</li>
+              <li>Likelihood based inference and Fisher information</li>
+              <li>Computation in R and C++ with Rcpp</li>
+            </ul>
+            <a href="research.html" class="btn-link">Read more on the Research page →</a>
+          </div>
+
+          <div class="card">
+            <h3>Teaching Profile</h3>
+            <ul class="tight-list">
+              <li>Instructor of record for precalculus and calculus</li>
+              <li>Experience with both in person and fully online formats</li>
+              <li>Uses Canvas style LMS shells and online homework systems</li>
+              <li>Active learning, group work, and structured practice</li>
+              <li>Strong record of student evaluations and teaching awards</li>
+            </ul>
+            <a href="teaching.html" class="btn-link">Read more on the Teaching page →</a>
+          </div>
+
+          <div class="card">
+            <h3>Technical and Professional Skills</h3>
+            <ul class="tight-list">
+              <li>R, Rcpp, and C++ for simulation and estimation</li>
+              <li>LaTeX for professional mathematical writing</li>
+              <li>Version control and collaboration with Git and GitHub</li>
+              <li>Design of reproducible analysis pipelines</li>
+              <li>Mentoring undergraduates in research style projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards section -->
+    <section id="awards" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Awards and Recognition</h2>
+          <p>
+            The following awards reflect both teaching excellence and academic achievement.
+            Exact titles may vary by institution, but the list captures the type of recognition
+            I have received.
+          </p>
+          <ul class="award-list">
+            <li>
+              <strong>Outstanding Teaching Fellow Award</strong>  
+              Recognizes exceptional performance as an instructor and teaching fellow in
+              undergraduate mathematics courses.
+            </li>
+            <li>
+              <strong>University Level Teaching Award Nomination</strong>  
+              Nominated by faculty for a competitive teaching award based on classroom
+              effectiveness, student feedback, and contributions to curriculum.
+            </li>
+            <li>
+              <strong>Academic Excellence Award in Mathematics</strong>  
+              Honors sustained strength in advanced coursework and outstanding performance in
+              graduate level mathematics.
+            </li>
+            <li>
+              <strong>Graduate Assistantship and Scholarship Support</strong>  
+              Multiple years of competitively awarded support for graduate study, reflecting
+              promise as a researcher and teacher in mathematics.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Short call to action for recruiters -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="card card-cta">
+          <h2>Summary for Hiring Committees</h2>
+          <p>
+            I bring a combination of strengths that aligns well with teaching focused and
+            teacher scholar institutions:
+          </p>
+          <ul>
+            <li>
+              A focused research program in modern stochastic processes that is accessible
+              to students and open to interdisciplinary collaboration.
+            </li>
+            <li>
+              Documented success in teaching core undergraduate mathematics courses and building
+              supportive learning environments.
+            </li>
+            <li>
+              Experience with online tools, LMS platforms, and reproducible computation that
+              translate directly into classroom and departmental contributions.
+            </li>
+            <li>
+              A long term commitment to mentoring students and to broadening participation in
+              mathematically intensive fields.
+            </li>
+          </ul>
+          <p>
+            My CV provides a concise overview of publications, talks, and detailed teaching
+            history.
+          </p>
+          <a href="assets/pdfs/Tekendra_Bhatt_CV.pdf" class="btn-primary" target="_blank" rel="noopener">
+            View full CV
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Tekendra Bhatt</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
