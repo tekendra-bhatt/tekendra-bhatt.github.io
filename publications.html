@@ -31,196 +31,148 @@
 
   <main>
     <!-- Overview -->
-    <section class="section">
-      <div class="container">
-        <div class="card">
-          <h2>Overview</h2>
-          <p>
-            I am in the process of building a formal publication record. At present my work is 
-            organized around two major projects that share a common theme:
-            start from rigorous probabilistic theory, develop efficient computational tools, 
-            and then validate methods on realistic data sets.
-          </p>
-          <p>
-            The first project develops a complete likelihood based framework for an oscillatory
-            Hawkes process, including asymptotic theory, Fisher information, and testing for
-            sinusoidal modulation. The second project develops a general differential operator
-            approach to analytic moment formulas for Hawkes processes with kernels that can be
-            represented by linear differential equations with constant coefficients.
-          </p>
-        </div>
-      </div>
-    </section>
-
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <h2>Overview</h2>
+      <p>
+        I am in the early stages of building a formal publication record. At present my work is
+        organized around two major projects that share a common theme: begin with rigorous
+        probabilistic theory, design computational tools that reflect that theory, and then
+        check performance on realistic data sets.
+      </p>
+      <p>
+        The first project develops a likelihood based framework for parametric Hawkes processes,
+        with particular attention to an oscillatory Hawkes model. It covers asymptotic properties
+        of maximum likelihood estimators, Fisher information, and testing for sinusoidal
+        modulation in the excitation kernel. The second project introduces a general differential
+        operator approach to analytic moment formulas for Hawkes processes whose kernels admit
+        a linear differential representation with constant coefficients, covering both monotonic
+        and non monotonic examples.
+      </p>
+    </div>
+  </div>
+</section>
     <!-- Project 1 -->
     <section class="section section-muted">
       <div class="container">
                 <div class="card">
-          <h2>Project 1 - Likelihood Theory for Oscillatory Hawkes Processes</h2>
-          <p><strong>Status:</strong> Manuscript in preparation</p>
+  <h2>Project 1 - Likelihood Theory for Oscillatory and General Hawkes Processes</h2>
+  <p><strong>Status:</strong> Manuscript in preparation</p>
 
-          <h3>General framework for Hawkes maximum likelihood</h3>
-          <p>
-            This project begins with a general study of consistency and asymptotic normality of
-            maximum likelihood estimators for parametric Hawkes processes with a nonnegative
-            excitation kernel g(t; θ<sub>g</sub>) 1{t ≥ 0}. The analysis explicitly distinguishes the
-            stationary Hawkes process N<sup>*</sup><sub>t</sub>, defined on the whole real line, and the
-            asymptotically stationary process N<sub>t</sub>, defined on [0, ∞), with associated
-            intensities λ<sup>*</sup><sub>t,θ</sub> and λ<sub>t,θ</sub>.
-          </p>
-          <p>
-            Under compactness, identifiability, and integrability assumptions (A1 to A4), I establish
-            uniform L<sup>p</sup> bounds for the intensities and for their first and second order
-            derivatives with respect to the parameters. A key result is an asymptotic equivalence
-            statement
-            <em>sup</em><sub>θ∈Θ</sub> ∥λ<sub>t,θ</sub> − λ<sup>*</sup><sub>t,θ</sub>∥<sub>p</sub> → 0 as t → ∞,
-            with analogous convergence for the derivatives. The proofs combine Hölder, Jensen, and
-            Minkowski inequalities with martingale bounds for compensated counting measures and
-            kernel dominated integrability conditions.
-          </p>
-          <p>
-            I further show mixing and ergodicity of the stationary intensity process λ<sup>*</sup><sub>t</sub>
-            for bounded test functions and extend ergodicity to classes of functions with
-            polynomial growth under moment conditions. This yields time average laws of large
-            numbers that hold uniformly over the parameter space Θ. These ingredients provide
-            exactly the regularity needed for maximum likelihood consistency and a quadratic
-            expansion of the log likelihood leading to asymptotic normality with the usual
-            Fisher information limit. Importantly, this framework is not restricted to a single
-            kernel. It applies to any nonnegative kernel that satisfies the regularity conditions,
-            so it covers a broad class of monotone and non monotone excitation functions.
-          </p>
+  <h3>General asymptotic framework for Hawkes maximum likelihood</h3>
+  <p>
+    This project develops a general framework for maximum likelihood inference in parametric
+    Hawkes processes with nonnegative excitation kernels. I distinguish carefully between a
+    stationary Hawkes process defined on the whole real line and an asymptotically stationary
+    process observed on a finite horizon, and study their associated conditional intensities
+    as functions of the parameter.
+  </p>
+  <p>
+    Under natural compactness, identifiability, and integrability conditions, I obtain
+    regularity results for these intensities and their parameter derivatives and show that,
+    as the observation window grows, the finite horizon intensity becomes asymptotically
+    equivalent to the stationary intensity uniformly over the parameter space. This leads
+    to laws of large numbers and central limit behavior for the log likelihood and its
+    derivatives and yields consistency and asymptotic normality of the maximum likelihood
+    estimator with the usual Fisher information limit. The assumptions are stated directly
+    in terms of the kernel, so the results apply to a broad class of Hawkes models, not
+    only to the specific oscillatory form considered later.
+  </p>
 
-          <h3>Model and oscillatory setting</h3>
-          <p>
-            Within this general framework I focus on a family of Hawkes processes with a
-            sinusoidally modulated, exponentially decaying excitation kernel. The model includes
-            both monotone and non monotone kernels as special cases and is driven by a constant
-            baseline intensity together with a kernel that satisfies an appropriate stability
-            condition. The same assumptions cover processes started at time zero and stationary
-            processes that conceptually start at negative infinity.
-          </p>
+  <h3>Oscillatory Hawkes model and Fisher information</h3>
+  <p>
+    Within this general setting I focus on a Hawkes model with a sinusoidally modulated,
+    exponentially decaying excitation kernel. The model has five parameters, including a
+    frequency parameter and an amplitude parameter that control the oscillatory structure.
+    I study the Fisher information matrix for this family, derive closed form expressions
+    in terms of transforms of the kernel, and construct accurate analytic approximations
+    that agree closely with observed information computed from simulated data.
+  </p>
+  <p>
+    Because the oscillatory parameters are challenging to estimate, I design a multi stage
+    estimation procedure that combines coarse frequency exploration with local likelihood
+    optimization. Simulation experiments show that this protocol can recover the full
+    parameter vector with high precision in realistic sample sizes and delivers reliable
+    standard errors based on the Fisher information.
+  </p>
 
-          <h3>Fisher information and estimation challenges</h3>
-          <p>
-            A second major component of the project is a detailed study of Fisher information and
-            parameter estimation for this oscillatory Hawkes family. I derive a closed form
-            expression for the Fisher information matrix using Laplace transforms, together with
-            an approximate analytic Fisher information for the proposed oscillating kernel. I then
-            compare these analytic matrices with the observed Fisher information obtained from
-            simulated data and show that the approximations are very accurate in realistic
-            regimes.
-          </p>
-          <p>
-            The model has five parameters. In particular, the frequency parameter and the
-            parameter that controls the amplitude of oscillations are difficult to estimate in
-            practice. I therefore design a multi stage estimation protocol that combines coarse
-            searches over frequency, profile likelihood, and local optimization. Simulations show
-            that this procedure recovers all parameters with high precision and provides useful
-            standard errors based on the Fisher information.
-          </p>
-
-          <h3>Testing for sinusoidal modulation</h3>
-          <p>
-            The third contribution is a test for the presence of sinusoidal modulation in the
-            excitation kernel. In this setting the frequency parameter is a nuisance parameter
-            that is not identified under the null hypothesis of no modulation. Following the
-            approach of Davies, I construct a global score test based on the supremum of
-            per frequency score statistics. The p value is approximated using the upcrossing
-            method for a chi squared process with one degree of freedom.
-          </p>
-          <p>
-            Through simulation studies I verify that the proposed test has good control of the
-            type I error rate and useful power in relevant parameter regimes. An application to
-            high frequency financial data illustrates how the method can reveal intraday,
-            regime switching market dynamics that are not visible under a purely monotone
-            excitation kernel.
-          </p>
-        </div>
+  <h3>Testing for sinusoidal modulation</h3>
+  <p>
+    A third component of the project is a test for the presence of sinusoidal modulation in
+    the excitation kernel. In this problem the frequency parameter is a nuisance parameter
+    that is not identified under the null hypothesis of no modulation. Adapting an approach
+    due to Davies, I construct a global score type statistic based on the supremum of
+    frequency specific scores and approximate its distribution using an upcrossing based
+    p value calculation.
+  </p>
+  <p>
+    Simulation studies indicate that the test has good size and power properties across a
+    range of scenarios. An application to high frequency financial data illustrates how
+    the oscillatory model and the associated test can reveal intraday patterns and
+    regime switching behavior that are not captured by monotone kernels alone.
+  </p>
+</div>
       </div>
     </section>
 
     <!-- Project 2 -->
     <section class="section">
-      <div class="container">
-        <div class="card">
-  <h2>Project 2 — A Differential-Operator Method for Analytical Moments of Hawkes Processes</h2>
-  <p><strong>Status:</strong> Technical report and manuscript in preparation</p>
+  <div class="container">
+    <div class="card">
+      <h2>Project 2 - Analytic Moments for Hawkes Processes via Differential Operators</h2>
+      <p><strong>Status:</strong> Technical manuscripts and follow up work in preparation</p>
 
-  <h3>A general method based on differential operators</h3>
-  <p>
-    This project develops a unified analytical framework for computing closed-form
-    moments of linear Hawkes processes by transforming the usual recursive Volterra
-    system for cluster factorial moment densities into a system of ordinary differential
-    equations with constant coefficients. The method begins from the branching-process
-    representation of a Hawkes cluster and the associated probability generating function
-    (PGF). By repeatedly differentiating the PGF at zero, one obtains a hierarchy of coupled
-    Volterra integral equations for the factorial moments. The core contribution is the
-    identification of a <em>minimal annihilating differential operator</em> that eliminates the
-    kernel from these convolution equations, converting each Volterra equation into a
-    linear ODE of fixed order whose coefficients depend only on the kernel.
-  </p>
+      <h3>A general differential operator framework</h3>
+      <p>
+        In this project I develop a general differential operator framework for computing
+        analytical moments of linear Hawkes processes. The idea is to work at the level of
+        cluster factorial moments and to encode the effect of the excitation kernel through
+        a linear differential operator with constant coefficients. This reduces the moment
+        problem to solving a fixed order ordinary differential equation whose structure
+        depends only on the kernel.
+      </p>
+      <p>
+        The method applies whenever the kernel admits a finite order linear differential
+        representation, which covers a broad class of monotonic and non monotonic kernels.
+        In contrast to some existing approaches for moment calculations in Hawkes processes,
+        the framework avoids heavy machinery and keeps the analysis anchored to a single,
+        carefully chosen differential operator.
+      </p>
 
-  <p>
-    This differential-operator reduction provides a general and tractable method applicable
-    whenever the excitation kernel admits a finite-order linear differential equation with
-    constant coefficients. This includes a large class of monotonic and non-monotonic
-    kernels, far beyond the standard exponential family. Compared with classical
-    approaches using infinitesimal generators, martingale methods, or the multi-step
-    expansion techniques of Cui, Hawkes, and Yi
-    <span class="file-citation">:contentReference[oaicite:1]{index=1}</span>,
-    the proposed method avoids heavy stochastic machinery and replaces it with a single,
-    systematically constructed ODE.
-  </p>
+      <h3>Applications to exponential, gamma, and oscillatory kernels</h3>
+      <p>
+        I first validate the framework on the classical exponential kernel, where it recovers
+        known moment formulas. I then extend the analysis to gamma type kernels, and obtain 
+        closed form expressions for the mean event count and
+        a structured route toward higher order moments. This highlights how the same
+        operator based viewpoint can accommodate kernels with richer temporal structure.
+      </p>
+      <p>
+        The method is then applied to the sinusoidally modulated, exponentially decaying
+        kernel that appears in my oscillatory Hawkes model. In this setting the associated
+        operator naturally reflects the oscillatory behavior of the kernel, and the resulting
+        moment expressions capture both decay and oscillation in a transparent way. The
+        framework provides consistent treatment of exponential, gamma, and oscillatory
+        cases within a single analytic toolkit.
+      </p>
 
-  <h3>Applications to exponential, gamma, and sinusoidally modulated kernels</h3>
-  <p>
-    For the exponential kernel the method reproduces known closed-form moments,
-    confirming correctness and serving as the base case in the hierarchy. For the gamma
-    kernel the annihilating operator becomes second-order, leading to a recursive pair of
-    ODEs for the first two factorial moment densities. Solving these yields explicit
-    formulas for the mean event count and a transparent pathway toward higher-order
-    moments. This provides a more direct alternative to PGF-based or generator-based
-    derivations in the literature.
-  </p>
+      <h3>Scope and significance</h3>
+      <p>
+        The main contribution of this project is to show that many Hawkes kernels used in
+        applications, including both monotonic and non monotonic examples, can be handled
+        by the same differential operator approach. Compared with classical
+        approaches using infinitesimal generators, martingale methods, or the multi-step
+        expansion techniques, the proposed method avoids heavy stochastic machinery and 
+        replaces it with a single, systematically constructed ODE. This yields a generic pathway to
+        analytical or semi analytical moment expressions that is conceptually simple,
+        flexible, and well suited for further work on dependence structure, model
+        comparison, and diagnostic tools for Hawkes processes. 
+      </p>
+    </div>
+  </div>
+</section>
 
-  <p>
-    The method handles kernels with oscillation or modulation in a natural way.
-    For the proposed sinusoidally modulated, exponentially decaying kernel—non-monotonic
-    by construction—the annihilating differential operator becomes third-order, with one
-    real and a complex conjugate pair of characteristic roots. This structure controls the
-    form of both the homogeneous and particular solutions. I give a full derivation of the
-    first four moments, including an explicit formula for the forcing term that appears in
-    the second-moment equation and a careful treatment of resonance when the forcing
-    shares exponents with the homogeneous solution. The resulting moment formulas
-    capture the oscillatory behavior of the model in closed form.
-  </p>
-
-  <h3>Extension to kernels with higher-order structure (Erlang-2 and beyond)</h3>
-  <p>
-    The same differential-operator framework applies to excitation kernels that correspond
-    to higher-order linear ODEs. I illustrate this by working out the Erlang-2 kernel,
-    identifying the appropriate annihilating operator, computing the convolution transform,
-    and deriving the ODE governing the first factorial moment. This leads to a closed
-    form for the mean count E[N<sub>T</sub>] and provides a clear recipe for constructing the
-    forcing term in the second-moment equation. The structure of the derivation shows
-    how resonance and root multiplicity influence the particular solution.
-  </p>
-
-  <h3>General significance</h3>
-  <p>
-    Overall this project introduces a generic, algebraically driven method for obtaining
-    analytical moments of Hawkes processes across a broad class of both monotonic and
-    non-monotonic kernels. Its strength lies in reducing a potentially complicated
-    probabilistic problem to <em>a single linear differential equation with constant
-    coefficients</em>, making the approach simple to implement and extensible to many
-    kernel families used in applications. The framework complements and simplifies
-    existing methods and provides the analytic foundation needed for later developments
-    in likelihood theory and model comparison.
-  </p>
-</div>
-
-      </div>
-    </section>
 
     <!-- Looking ahead -->
     <section class="section section-muted">
