@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Publications and Projects - Tekendra Bhatt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="site-title">Publications and Projects</h1>
+        <p class="site-subtitle">Rigorous theory, computation, and applications for Hawkes processes</p>
+      </div>
+      <div class="header-contact">
+        <a href="index.html#about" class="link-inline">← Back to home</a>
+      </div>
+    </div>
+
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="teaching.html" class="nav-link">Teaching</a>
+        <a href="publications.html" class="nav-link active">Publications</a>
+        <a href="index.html#awards" class="nav-link">Awards</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Overview -->
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Overview</h2>
+          <p>
+            I am in the process of building a formal publication record. At present my work is 
+            organized around two major projects that share a common theme:
+            start from rigorous probabilistic theory, develop efficient computational tools, 
+            and then validate methods on realistic data sets.
+          </p>
+          <p>
+            The first project develops a complete likelihood based framework for an oscillatory
+            Hawkes process, including asymptotic theory, Fisher information, and testing for
+            sinusoidal modulation. The second project develops a general differential operator
+            approach to analytic moment formulas for Hawkes processes with kernels that can be
+            represented by linear differential equations with constant coefficients.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project 1 -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="card">
+          <h2>Project 1 - Likelihood Theory for Oscillatory Hawkes Processes</h2>
+          <p><strong>Status:</strong> Manuscript in preparation</p>
+
+          <h3>Model and setting</h3>
+          <p>
+            This project studies a class of Hawkes processes with a sinusoidally modulated,
+            exponentially decaying excitation kernel. The model includes both monotone and
+            non monotone kernels as special cases and is driven by a constant baseline
+            intensity together with a kernel that satisfies an appropriate stability condition.
+            The same assumptions cover processes started at time zero and stationary processes
+            that conceptually start at negative infinity.
+          </p>
+
+          <h3>Rigorous asymptotic theory for maximum likelihood</h3>
+          <p>
+            The first contribution is a rigorous treatment of consistency and asymptotic
+            normality of maximum likelihood estimators for this family of Hawkes models. 
+            A key step is to control the conditional intensity for both processes that start 
+            at time zero and stationary processes that start at negative infinity, and to show 
+            that their conditional intensities are asymptotically equivalent to that of the 
+            stationary Hawkes process with the same kernel.
+          </p>
+          <p>
+            I establish boundedness and asymptotic equivalence of these intensities under
+            structural assumptions on the kernel that apply to an entire class of kernels,
+            not only to the specific oscillating kernel I propose. This class can include
+            monotone and non monotone kernels as long as they satisfy a stability criterion.
+            These results then feed into a uniform law of large numbers for the log likelihood 
+            and the derivation of asymptotic normality of the estimator.
+          </p>
+
+          <h3>Fisher information and estimation challenges</h3>
+          <p>
+            The second contribution is a detailed study of Fisher information and parameter
+            estimation. I derive a closed form expression for the Fisher information matrix
+            using Laplace transforms, together with an approximate analytic Fisher information
+            for the proposed oscillatory kernel. I then compare these analytic matrices with
+            the observed Fisher information obtained from simulated data and show that the
+            approximations are very accurate in realistic regimes.
+          </p>
+          <p>
+            The model has five parameters. In particular, the frequency parameter and the
+            parameter that governs the amplitude of oscillations are difficult to estimate in
+            practice. I therefore design a multi stage estimation protocol that combines grid
+            searches, profile likelihood, and local optimization. Simulations show that this
+            procedure recovers all parameters with high precision and provides useful standard
+            errors based on the Fisher information.
+          </p>
+
+          <h3>Testing for sinusoidal modulation</h3>
+          <p>
+            The third contribution is a test for the presence of sinusoidal modulation in the
+            excitation kernel. In this setting the frequency parameter is a nuisance parameter
+            that is not identified under the null hypothesis of no modulation. Following the
+            approach of Davies, I construct a global score test based on the supremum of
+            per frequency score statistics. The p value is approximated using the upcrossing 
+            method for a chi squared process with one degree of freedom.
+          </p>
+          <p>
+            Through simulation studies I verify that the proposed test has good control of the
+            type I error rate and useful power in relevant parameter regimes. An application 
+            to high frequency financial data illustrates how the method can reveal intraday, 
+            regime switching market dynamics that are not visible under a purely monotone
+            excitation kernel.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project 2 -->
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <h2>Project 2 - Analytic Moments for Hawkes Processes via Differential Operators</h2>
+          <p><strong>Status:</strong> Technical manuscripts and follow up work in preparation</p>
+
+          <h3>Sinusoidally modulated exponential kernel</h3>
+          <p>
+            The first part of this project presents a complete analytical framework for
+            calculating the first four moments of a linear Hawkes process with a sinusoidally
+            modulated, exponentially decaying kernel. Starting from the branching process
+            representation, I derive a Volterra integral equation for the cluster probability
+            generating function. By repeatedly differentiating the generating function, I obtain
+            a recursive system of Volterra equations for functions related to factorial moments
+            of cluster sizes.
+          </p>
+          <p>
+            I then introduce a differential operator method that converts this system of
+            integral equations into a recursive system of third order linear ordinary differential
+            equations with constant coefficients. I prove that the corresponding characteristic
+            equation has one real root and a pair of complex conjugate roots for all physically
+            relevant parameter values. Finally, I give a detailed, step by step solution strategy
+            for these equations, including an explicit derivation of the particular solution for
+            the second order case and a complete pathway to the analytic moment formulas.
+          </p>
+
+          <h3>Erlang-2 kernel and generalization</h3>
+          <p>
+            The second part of the project applies this differential operator framework to a
+            Hawkes process with an Erlang 2 excitation kernel. Starting from the recursive
+            Volterra equations for derivatives of the cluster generating function, I identify
+            a minimal annihilating differential operator for the Erlang 2 kernel and compute
+            the associated convolution transform operator.
+          </p>
+          <p>
+            This leads to a second order ordinary differential operator that governs all
+            factorial moment densities. I solve the resulting ordinary differential equation
+            for the first moment density explicitly and obtain a closed form expression for
+            the expected event count. I then outline the construction of the forcing term for
+            the second moment density and the corresponding particular solution, making clear
+            the role of resonance when the forcing shares exponents with the homogeneous
+            solution.
+          </p>
+          <p>
+            The main idea is not tied to these specific kernels. The method can be applied
+            to any Hawkes process whose kernel can be represented by a differential equation
+            with constant coefficients. This creates a unified and systematic route to analytic
+            or semi analytic moment formulas for a broad class of Hawkes models.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Looking ahead -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="card">
+          <h2>Looking Ahead</h2>
+          <p>
+            Together these projects aim to provide a coherent toolkit for Hawkes processes
+            that combines rigorous asymptotic theory, analytic formulas for dependence
+            structure, and carefully designed computational methods. My goal is to develop
+            these results into a sequence of research articles that are accessible to applied
+            probabilists and practitioners, and that support student projects at both the
+            undergraduate and graduate level.
+          </p>
+          <p>
+            A brief summary of my broader research interests is available on the
+            <a href="research.html">Research</a> page, and my curriculum vitae lists talks,
+            manuscripts in progress, and related work.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Tekendra Bhatt</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
