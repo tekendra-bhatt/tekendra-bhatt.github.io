@@ -2,50 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Research - Tekendra Bhatt</title>
+  <title>Research | Tekendra Bhatt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Research by Tekendra Bhatt at Augusta University in applied probability, Hawkes processes, statistical inference, analytic moments, and reproducible computation."
+  >
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
         <h1 class="site-title">Research</h1>
-        <p class="site-subtitle">Probability · Stochastic Processes · Event Data</p>
+        <p class="site-subtitle">
+          Tekendra Bhatt, Ph.D. · Augusta University
+        </p>
+        <p class="site-subtitle">
+          Applied Probability · Stochastic Processes · Statistical Inference
+        </p>
       </div>
+
       <div class="header-contact">
-        <a href="index.html#about" class="link-inline">← Back to home</a>
+        <a
+          href="mailto:bhatt_tekendra@hotmail.com"
+          class="link-inline"
+        >
+          bhatt_tekendra@hotmail.com
+        </a>
+
+        <a
+          href="mailto:tbhatt@augusta.edu"
+          class="link-inline"
+        >
+          tbhatt@augusta.edu
+        </a>
+
+        <a href="index.html#about" class="link-inline">
+          ← Back to home
+        </a>
       </div>
     </div>
 
-   <nav class="site-nav">
-  <div class="container nav-inner">
-    <a href="index.html#about" class="nav-link">About</a>
-    <a href="research.html" class="nav-link active">Research</a>
-    <a href="teaching.html" class="nav-link">Teaching</a>
-    <a href="publications.html" class="nav-link">Publications</a>
-    <a href="index.html#awards" class="nav-link">Awards</a>
-  </div>
-</nav>
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a
+          href="research.html"
+          class="nav-link active"
+          aria-current="page"
+        >
+          Research
+        </a>
+        <a href="teaching.html" class="nav-link">Teaching</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="index.html#service" class="nav-link">Service</a>
+        <a href="index.html#awards" class="nav-link">Awards</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
   </header>
+
   <main>
     <section class="section">
       <div class="container">
         <div class="card">
-          <h2>Research Areas</h2>
+          <h2>Research Overview</h2>
+
           <p>
-            My work lies in probability, stochastic processes, and statistical inference with
-            a focus on self exciting point processes. I am especially interested in models that
-            describe how events accumulate in time when each event can trigger further activity.
+            How do past events change the chance of future events?
+            This question motivates my research in applied probability,
+            stochastic processes, and statistical inference.
           </p>
-          <ul>
-            <li>Hawkes type and self exciting point processes</li>
-            <li>Oscillatory and non monotone excitation kernels</li>
-            <li>Stability, ergodicity, and asymptotic theory</li>
-            <li>Likelihood based inference and Fisher information</li>
-            <li>Simulation, optimization, and reproducible computation in R</li>
-            <li>Applications in finance, reliability, neuroscience, and social data</li>
+
+          <p>
+            I study Hawkes processes, which describe event sequences
+            in which an event can trigger further activity. My work
+            combines mathematical theory, simulation, and estimation
+            to understand these patterns and develop methods for
+            analyzing event data.
+          </p>
+
+          <ul class="tight-list">
+            <li>Hawkes processes and self-exciting point processes.</li>
+            <li>Oscillatory and nonmonotonic excitation kernels.</li>
+            <li>Stability, ergodicity, and asymptotic theory.</li>
+            <li>Maximum likelihood estimation and Fisher information.</li>
+            <li>Analytic moments and differential operator methods.</li>
+            <li>Simulation and reproducible statistical computing in R.</li>
           </ul>
+
+          <p>
+            My current manuscripts and software projects are described
+            on the <a href="publications.html">Publications</a> page.
+          </p>
         </div>
       </div>
     </section>
@@ -53,22 +104,37 @@
     <section class="section section-muted">
       <div class="container">
         <div class="card">
-          <h2>Hawkes Processes and Their Limitations</h2>
+          <h2>Why Oscillatory Hawkes Processes?</h2>
+
           <p>
-            Hawkes processes model events that tend to cluster in time. Each event increases the
-            future intensity through a kernel function. This simple idea has made Hawkes models
-            a standard tool for high frequency events in many fields.
+            In a Hawkes process, each event contributes to the rate
+            of future events through an excitation kernel. A common
+            choice is an exponentially decaying kernel, which models
+            an influence that fades steadily with time.
           </p>
+
           <p>
-            Classical models usually impose kernels that are positive and decaying. This captures
-            basic self excitation but prevents behavior such as rebounds, damped oscillations, or
-            temporary suppression followed by recovery. Data from financial markets, biological
-            systems, and social activity often show patterns that are richer than monotone decay.
+            Some systems exhibit delayed rebounds or recurring peaks
+            in activity. I investigate sinusoidally modulated,
+            exponentially decaying kernels that allow an event's
+            influence to rise and fall while gradually fading.
+            Under suitable parameter restrictions, these kernels
+            remain nonnegative and preserve the branching
+            interpretation of a linear Hawkes process.
           </p>
+
           <p>
-            In addition, inference for extended kernels can be fragile if one works without a
-            firm theoretical foundation. Questions of stability, identifiability, and
-            asymptotics become more delicate once the kernel changes shape.
+            The oscillations describe variations in excitation.
+            They do not represent inhibition below the background
+            event rate. Distinguishing these mechanisms is important
+            when interpreting a fitted model.
+          </p>
+
+          <p>
+            A more flexible kernel also creates statistical challenges.
+            My work examines when parameters can be identified,
+            how reliably they can be estimated, and when the
+            additional structure improves the description of data.
           </p>
         </div>
       </div>
@@ -76,120 +142,216 @@
 
     <section class="section">
       <div class="container">
+        <h2>Current Research</h2>
+
         <div class="card">
-          <h2>My Contributions</h2>
+          <h3>Oscillatory Models and Their Foundations</h3>
 
-          <h3>1. Oscillatory and Damped Excitation Kernels</h3>
           <p>
-            I construct families of kernels that produce oscillatory or rebound behavior while
-            preserving the branching interpretation that makes Hawkes processes intuitive.
-            Classical monotone kernels appear as special cases inside a larger family. This
-            allows data driven comparison between simple and more expressive models.
-          </p>
-
-          <h3>2. Structural Assumptions and Stability</h3>
-          <p>
-            To ensure that the intensity process remains well behaved, I develop structural
-            conditions that guarantee stability, boundedness, and ergodicity. These conditions
-            are stated in a way that covers both monotone and oscillatory kernels, which keeps
-            the theory unified and usable in practice.
+            I develop Hawkes models with oscillatory excitation
+            kernels and study conditions for stability, ergodicity,
+            and identifiability. The classical exponential model
+            appears as a special case, supporting comparisons
+            between simpler and more flexible descriptions of
+            event clustering.
           </p>
 
-          <h3>3. Maximum Likelihood and Asymptotic Theory</h3>
+          <h3>Likelihood Inference and Uncertainty</h3>
+
           <p>
-            I study maximum likelihood estimators for these extended Hawkes models and show that,
-            under appropriate conditions, they are consistent and asymptotically normal. The
-            argument combines uniform convergence of the log likelihood with ergodic properties
-            of the intensity process. This creates a solid justification for likelihood based
-            estimation in models that go beyond the classical setting.
+            I study maximum likelihood estimation for parametric
+            Hawkes processes. Under appropriate assumptions, my
+            analysis establishes consistency and asymptotic
+            normality of the estimators, accounting for the
+            relationship between stationary models and observations
+            over finite time intervals.
           </p>
 
-          <h3>4. Moments, Covariances, and Fisher Information</h3>
           <p>
-            I derive analytic expressions or accurate approximations for means, covariance
-            functions, and Fisher information matrices. These formulas provide insight into how
-            parameters influence variability and dependence, and they lead to practical standard
-            errors and diagnostic tools.
+            For oscillatory models, I investigate Fisher information
+            and develop analytic expressions and approximations
+            to support uncertainty quantification. Simulation
+            studies help assess estimation accuracy and the
+            practical behavior of these approximations.
           </p>
 
-          <h3>5. Computational Tools in R </h3>
+          <h3>Analytic Moments through Differential Operators</h3>
+
           <p>
-            I implement simulation, likelihood evaluation, gradient based optimization, and
-            diagnostic plots in. Thecode is organized to be modular and reproducible, making 
-            it easier for others to adapt the framework to new data sets and applications.
+            A second research direction develops a systematic
+            approach to moment calculations for linear Hawkes
+            processes. For kernels admitting a suitable finite-order
+            differential representation, the method reduces
+            associated moment equations to ordinary differential
+            equations.
           </p>
 
-                    <h3>6. Applications and Student Projects</h3>
           <p>
-            I apply these models to realistic event data sets, comparing oscillatory and classical
-            Hawkes models by fit, predictive performance, and interpretability. A typical project
-            cycle begins with a rigorous probabilistic formulation, continues with careful
-            computation and simulation in R and C plus plus, and finishes with an application to
-            real data where the model assumptions are checked and refined.
+            I investigate exponential, gamma-type, and oscillatory
+            kernels within this framework. The goal is to clarify
+            how kernel parameters influence event-count variability
+            and provide useful tools for further statistical analysis.
           </p>
+
+          <h3>Computation and Model Assessment</h3>
+
           <p>
-            This structure supports a range of projects for both undergraduate and graduate
-            students. At the introductory level, students explore self exciting behavior through
-            simulation and visualization. At the intermediate level, students fit and critique
-            models for real event data, learning how theory guides practical choices. At the
-            advanced level, graduate students can work on individual pieces of the theoretical
-            or computational program, such as proving specific limit results for a family of
-            kernels or implementing and benchmarking new estimation routines.
+            I implement simulation, likelihood evaluation,
+            optimization, and diagnostic tools in R. My computational
+            work emphasizes reproducible experiments and clear
+            comparisons between models.
           </p>
+
+          <p>
+            Applications to financial event data examine how
+            oscillatory kernels describe temporal patterns.
+            Broader interests include event data from neuroscience,
+            cybersecurity, and other settings where activity
+            clusters over time.
+          </p>
+
+          <a href="publications.html" class="btn-link">
+            View manuscripts and software projects →
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted">
+    <section id="student-projects" class="section section-muted">
+      <div class="container">
+        <h2>Student Research Opportunities</h2>
+
+        <div class="card">
+          <p>
+            Simulation provides an accessible starting point for
+            studying stochastic processes. Students can begin
+            with a simple model, generate event sequences, and
+            investigate how changing assumptions affects the
+            resulting patterns.
+          </p>
+
+          <h3>Possible Undergraduate Projects</h3>
+
+          <ul class="tight-list">
+            <li>
+              Simulate Poisson and Hawkes processes and compare
+              their event counts, waiting times, and clustering.
+            </li>
+            <li>
+              Explore how excitation strength and decay affect
+              simulated event sequences.
+            </li>
+            <li>
+              Study how observation length influences parameter
+              estimation accuracy.
+            </li>
+            <li>
+              Compare empirical moments from simulations with
+              theoretical predictions.
+            </li>
+          </ul>
+
+          <p>
+            These are potential projects that can be adapted to a
+            student's preparation. They provide opportunities to
+            develop computational skills, explain mathematical
+            findings, and produce a reproducible report.
+          </p>
+
+          <h3>Proposed Master's Capstone: When Events Breed Events</h3>
+
+          <p>
+            I presented this proposed capstone project to master's
+            students at Augusta University. It focuses on modeling
+            clustered event data and forecasting event-count
+            probabilities with Hawkes processes.
+          </p>
+
+          <p>
+            Potential application tracks include neural spike trains
+            and cybersecurity event logs. The proposed sequence
+            covers simulation, data preparation, maximum likelihood
+            estimation, comparison with a Poisson baseline, and
+            evaluation on held-out observations.
+          </p>
+
+          <p>
+            The project is intended to culminate in reproducible
+            code, a written report, and a presentation. Students
+            interested in pursuing it are welcome to contact me
+            to discuss preparation and scope.
+          </p>
+
+          <a href="mailto:tbhatt@augusta.edu" class="btn-link">
+            Discuss a student project →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container">
         <div class="card">
           <h2>Future Directions</h2>
+
           <p>
-            My long term research plan is to deepen the theory of Hawkes type models and to place
-            them in a broader landscape of stochastic processes that describe event driven and
-            continuous time phenomena. The guiding principle is to move repeatedly through a
-            cycle of rigorous theory, efficient computation, and validation on real systems.
+            My research agenda builds on the connection between
+            probabilistic foundations, statistical methods, and
+            computational evaluation. Directions I plan to pursue
+            include:
           </p>
+
           <ul>
             <li>
-              Develop sharper probabilistic results for oscillatory Hawkes processes, including
-              limit theorems, rates of mixing, and refined stability and approximation properties.
+              <strong>Diagnostics and forecast evaluation:</strong>
+              Develop methods for assessing model fit, checking
+              uncertainty estimates, and comparing predictions.
             </li>
             <li>
-              Study efficiency and robustness of inference procedures, such as likelihood based,
-              moment based, and semiparametric methods, with a focus on finite sample performance
-              for realistically sized data sets.
+              <strong>Multivariate and network models:</strong>
+              Extend oscillatory excitation to interacting event
+              streams and study their stability and identifiability.
             </li>
             <li>
-              Extend the framework to multivariate, spatial, and marked settings where Hawkes
-              dynamics interact with other stochastic structures, for example queueing models,
-              renewal processes, or diffusions driven by self exciting intensities.
+              <strong>Robust statistical inference:</strong>
+              Investigate finite-sample behavior and the effects
+              of model misspecification.
             </li>
             <li>
-              Explore related classes of stochastic processes that share some features with
-              Hawkes models, such as self correcting and inhibitory processes, and understand
-              when each family is most appropriate for modeling a given system.
+              <strong>Flexible kernel models:</strong>
+              Explore marked and nonparametric extensions while
+              maintaining interpretable model structure.
             </li>
             <li>
-              Build open source software that implements these ideas in a modular way, so that
-              both researchers and students can experiment with new kernels, estimators, and
-              diagnostics without rebuilding the core tools from scratch.
+              <strong>Research software:</strong>
+              Develop documented R tools for simulation, estimation,
+              and diagnostics, with examples suitable for researchers
+              and students.
             </li>
           </ul>
+
+          <p>
+            I welcome conversations about applied probability,
+            statistical modeling of event data, and collaborations
+            that connect mathematical research with student learning.
+          </p>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Tekendra Bhatt</p>
+      <p>
+        &copy; <span id="year">2026</span> Tekendra Bhatt.
+        Personal academic website.
+      </p>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
 </body>
 </html>
