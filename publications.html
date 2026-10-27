@@ -2,209 +2,340 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Publications and Projects - Tekendra Bhatt</title>
+  <title>Manuscripts and Projects | Tekendra Bhatt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Research manuscripts and ongoing projects by Tekendra Bhatt on Hawkes processes, statistical inference, analytic moments, and computational methods."
+  >
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <h1 class="site-title">Publications and Projects</h1>
-        <p class="site-subtitle">Rigorous theory, computation, and applications for Hawkes processes</p>
+        <h1 class="site-title">Manuscripts and Projects</h1>
+        <p class="site-subtitle">
+          Tekendra Bhatt, Ph.D. · Augusta University
+        </p>
+        <p class="site-subtitle">
+          Applied Probability · Stochastic Processes · Statistical Inference
+        </p>
       </div>
+
       <div class="header-contact">
-        <a href="index.html#about" class="link-inline">← Back to home</a>
+        <a
+          href="mailto:bhatt_tekendra@hotmail.com"
+          class="link-inline"
+        >
+          bhatt_tekendra@hotmail.com
+        </a>
+
+        <a
+          href="mailto:tbhatt@augusta.edu"
+          class="link-inline"
+        >
+          tbhatt@augusta.edu
+        </a>
+
+        <a href="index.html#about" class="link-inline">
+          ← Back to home
+        </a>
       </div>
     </div>
 
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Main navigation">
       <div class="container nav-inner">
         <a href="index.html#about" class="nav-link">About</a>
         <a href="research.html" class="nav-link">Research</a>
         <a href="teaching.html" class="nav-link">Teaching</a>
-        <a href="publications.html" class="nav-link active">Publications</a>
+        <a
+          href="publications.html"
+          class="nav-link active"
+          aria-current="page"
+        >
+          Publications
+        </a>
+        <a href="index.html#service" class="nav-link">Service</a>
         <a href="index.html#awards" class="nav-link">Awards</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <!-- Overview -->
-<section class="section">
-  <div class="container">
-    <div class="card">
-      <h2>Overview</h2>
-      <p>
-        I am in the early stages of building a formal publication record. At present my work is
-        organized around two major projects that share a common theme: begin with rigorous
-        probabilistic theory, design computational tools that reflect that theory, and then
-        check performance on realistic data sets.
-      </p>
-     <p>
-  The first project develops a likelihood based framework for parametric Hawkes processes. 
-  The theoretical results are stated in terms of general regularity conditions on the 
-  excitation kernel, so they apply to a broad class of models. My proposed oscillatory 
-  kernel is one example within this class, and I study it in more detail through Fisher 
-  information analysis, parameter estimation, and testing for sinusoidal modulation.
-</p>
-
-    </div>
-  </div>
-</section>
-    <!-- Project 1 -->
-    <section class="section section-muted">
+    <section class="section">
       <div class="container">
-                <div class="card">
-  <h2>Project 1 - Likelihood Theory for Oscillatory and General Hawkes Processes</h2>
-  <p><strong>Status:</strong> Manuscript in preparation</p>
+        <div class="card">
+          <h2>Overview</h2>
 
-  <h3>General asymptotic framework for Hawkes maximum likelihood</h3>
-  <p>
-    This project develops a general framework for maximum likelihood inference in parametric
-    Hawkes processes with nonnegative excitation kernels. I distinguish carefully between a
-    stationary Hawkes process defined on the whole real line and an asymptotically stationary
-    process observed on a finite horizon, and study their associated conditional intensities
-    as functions of the parameter.
-  </p>
-  <p>
-    Under natural compactness, identifiability, and integrability conditions, I obtain
-    regularity results for these intensities and their parameter derivatives and show that,
-    as the observation window grows, the finite horizon intensity becomes asymptotically
-    equivalent to the stationary intensity uniformly over the parameter space. This leads
-    to laws of large numbers and central limit behavior for the log likelihood and its
-    derivatives and yields consistency and asymptotic normality of the maximum likelihood
-    estimator with the usual Fisher information limit. The assumptions are stated directly
-    in terms of the kernel, so the results apply to a broad class of Hawkes models, not
-    only to the specific oscillatory form considered later.
-  </p>
+          <p>
+            My research connects probabilistic theory, statistical
+            inference, and computation for Hawkes processes. These
+            models describe event sequences in which past events
+            influence the rate of future activity.
+          </p>
 
-  <h3>Oscillatory Hawkes model and Fisher information</h3>
-  <p>
-    Within this general setting I focus on a Hawkes model with a sinusoidally modulated,
-    exponentially decaying excitation kernel. The model has five parameters, including a
-    frequency parameter and an amplitude parameter that control the oscillatory structure.
-    I study the Fisher information matrix for this family, derive closed form expressions
-    in terms of transforms of the kernel, and construct accurate analytic approximations
-    that agree closely with observed information computed from simulated data.
-  </p>
-  <p>
-    Because the oscillatory parameters are challenging to estimate, I design a multi stage
-    estimation procedure that combines coarse frequency exploration with local likelihood
-    optimization. Simulation experiments show that this protocol can recover the full
-    parameter vector with high precision in realistic sample sizes and delivers reliable
-    standard errors based on the Fisher information.
-  </p>
+          <p>
+            My current work includes likelihood-based inference,
+            oscillatory excitation kernels, analytic moment formulas,
+            and computational tools for simulation and estimation.
+            The manuscripts below are in preparation or ready for
+            submission; they are not listed as accepted or published
+            articles.
+          </p>
 
-  <h3>Testing for sinusoidal modulation</h3>
-  <p>
-    A third component of the project is a test for the presence of sinusoidal modulation in
-    the excitation kernel. In this problem the frequency parameter is a nuisance parameter
-    that is not identified under the null hypothesis of no modulation. Adapting an approach
-    due to Davies, I construct a global score type statistic based on the supremum of
-    frequency specific scores and approximate its distribution using an upcrossing based
-    p value calculation.
-  </p>
-  <p>
-    Simulation studies indicate that the test has good size and power properties across a
-    range of scenarios. An application to high frequency financial data illustrates how
-    the oscillatory model and the associated test can reveal intraday patterns and
-    regime switching behavior that are not captured by monotone kernels alone.
-  </p>
-</div>
+          <ul class="tight-list">
+            <li>
+              <a href="#likelihood">
+                Non-monotonic Hawkes Processes: Theory, Inference,
+                and Applications
+              </a>
+            </li>
+            <li>
+              <a href="#moments">
+                Analytic Moment Formulas for Hawkes Processes
+                via Differential Operators
+              </a>
+            </li>
+            <li>
+              <a href="#orthogonality">
+                Utilizing the Hawkes Process to Apply Orthogonality
+                in Normed Linear Space
+              </a>
+            </li>
+            <li>
+              <a href="#software">
+                R Software for Hawkes Process Simulation and Inference
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- Project 2 -->
-    <section class="section">
-  <div class="container">
-    <div class="card">
-      <h2>Project 2 - Analytic Moments for Hawkes Processes via Differential Operators</h2>
-      <p><strong>Status:</strong> Technical manuscripts and follow up work in preparation</p>
+    <section id="likelihood" class="section section-muted">
+      <div class="container">
+        <div class="card">
+          <h2>
+            Non-monotonic Hawkes Processes:
+            Theory, Inference, and Applications
+          </h2>
 
-      <h3>A general differential operator framework</h3>
-      <p>
-        In this project I develop a general differential operator framework for computing
-        analytical moments of linear Hawkes processes. The idea is to work at the level of
-        cluster factorial moments and to encode the effect of the excitation kernel through
-        a linear differential operator with constant coefficients. This reduces the moment
-        problem to solving a fixed order ordinary differential equation whose structure
-        depends only on the kernel.
-      </p>
-      <p>
-        The method applies whenever the kernel admits a finite order linear differential
-        representation, which covers a broad class of monotonic and non monotonic kernels.
-        In contrast to some existing approaches for moment calculations in Hawkes processes,
-        the framework avoids heavy machinery and keeps the analysis anchored to a single,
-        carefully chosen differential operator.
-      </p>
+          <p>
+            <strong>Status:</strong> Manuscript in preparation.
+          </p>
 
-      <h3>Applications to exponential, gamma, and oscillatory kernels</h3>
-      <p>
-        I first validate the framework on the classical exponential kernel, where it recovers
-        known moment formulas. I then extend the analysis to gamma type kernels, and obtain 
-        closed form expressions for the mean event count and
-        a structured route toward higher order moments. This highlights how the same
-        operator based viewpoint can accommodate kernels with richer temporal structure.
-      </p>
-      <p>
-        The method is then applied to the sinusoidally modulated, exponentially decaying
-        kernel that appears in my oscillatory Hawkes model. In this setting the associated
-        operator naturally reflects the oscillatory behavior of the kernel, and the resulting
-        moment expressions capture both decay and oscillation in a transparent way. The
-        framework provides consistent treatment of exponential, gamma, and oscillatory
-        cases within a single analytic toolkit.
-      </p>
+          <p>
+            This project develops likelihood-based inference for
+            parametric Hawkes processes, with particular attention
+            to sinusoidally modulated, exponentially decaying
+            excitation kernels. These kernels allow the influence
+            of an event to exhibit recurring peaks while decaying
+            over time.
+          </p>
 
-      <h3>Scope and significance</h3>
-      <p>
-        The main contribution of this project is to show that many Hawkes kernels used in
-        applications, including both monotonic and non monotonic examples, can be handled
-        by the same differential operator approach. Compared with classical
-        approaches using infinitesimal generators, martingale methods, or the multi-step
-        expansion techniques, the proposed method avoids heavy stochastic machinery and 
-        replaces it with a single, systematically constructed ODE. This yields a generic pathway to
-        analytical or semi analytical moment expressions that is conceptually simple,
-        flexible, and well suited for further work on dependence structure, model
-        comparison, and diagnostic tools for Hawkes processes. 
-      </p>
-    </div>
-  </div>
-</section>
+          <h3>Likelihood theory</h3>
 
+          <p>
+            I study the relationship between stationary Hawkes
+            processes and processes observed over a finite time
+            interval. Under appropriate regularity, identifiability,
+            and integrability conditions, the analysis establishes
+            consistency and asymptotic normality of maximum
+            likelihood estimators. The framework states assumptions
+            in terms of the excitation kernel, allowing applications
+            beyond the particular oscillatory model.
+          </p>
 
-    <!-- Looking ahead -->
+          <h3>Estimation and Fisher information</h3>
+
+          <p>
+            For the oscillatory model, I investigate Fisher information
+            and develop analytic expressions and approximations to
+            support uncertainty quantification. A multistage estimation
+            procedure combines frequency exploration with local
+            likelihood optimization. Simulation studies examine
+            parameter recovery and the accuracy of estimated
+            uncertainty.
+          </p>
+
+          <h3>Testing for oscillatory structure</h3>
+
+          <p>
+            Another component considers testing for sinusoidal
+            modulation. The frequency parameter is not identified
+            under the null hypothesis of no modulation, requiring
+            an approach that accounts for this feature. I investigate
+            a global score-based test across candidate frequencies,
+            using a Davies-type approach to approximate significance.
+          </p>
+
+          <p>
+            Applications to financial event data explore when
+            oscillatory excitation provides useful information
+            beyond models with monotonically decaying kernels.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="moments" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>
+            Analytic Moment Formulas for Hawkes Processes
+            via Differential Operators
+          </h2>
+
+          <p>
+            <strong>Status:</strong> Manuscript in preparation.
+          </p>
+
+          <p>
+            This project develops a differential operator approach
+            to moment calculations for linear Hawkes processes.
+            The central idea is to express the effect of the
+            excitation kernel through a linear differential
+            operator and reduce the associated moment equations
+            to ordinary differential equations.
+          </p>
+
+          <h3>A common framework for several kernel families</h3>
+
+          <p>
+            The approach applies to kernels that admit a suitable
+            finite-order linear differential representation.
+            I investigate exponential, gamma-type, and oscillatory
+            kernels within this framework, using cluster factorial
+            moments to organize the calculations.
+          </p>
+
+          <p>
+            For the exponential kernel, the method recovers known
+            moment formulas. Extensions to gamma-type and
+            oscillatory kernels provide a systematic route to
+            analytic or semi-analytic expressions for event-count
+            moments.
+          </p>
+
+          <h3>Purpose and further directions</h3>
+
+          <p>
+            The goal is to make moment calculations more systematic
+            across kernel families and clarify how kernel parameters
+            influence event-count variability. Further work considers
+            higher-order moments and their use in model comparison
+            and diagnostic methods.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="orthogonality" class="section section-muted">
+      <div class="container">
+        <div class="card">
+          <h2>
+            Utilizing the Hawkes Process to Apply Orthogonality
+            in Normed Linear Space
+          </h2>
+
+          <p>
+            <strong>Status:</strong>
+            Manuscript ready for submission.
+          </p>
+
+          <p>
+            A collaborative manuscript on Hawkes processes and
+            orthogonality in normed linear space. Further details
+            will be added when a version is available to share.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="software" class="section">
+      <div class="container">
+        <div class="card">
+          <h2>
+            R Software for Hawkes Process Simulation and Inference
+          </h2>
+
+          <p>
+            <strong>Status:</strong>
+            In development; documentation in progress.
+          </p>
+
+          <p>
+            I am developing R tools for simulating Hawkes processes,
+            estimating model parameters, and examining model fit.
+            This work supports reproducible numerical experiments
+            and comparisons between excitation kernels.
+          </p>
+
+          <ul class="tight-list">
+            <li>Simulation of event sequences.</li>
+            <li>Likelihood-based parameter estimation.</li>
+            <li>Diagnostic and model comparison tools.</li>
+            <li>Examples and documentation for reproducible analysis.</li>
+          </ul>
+
+          <p>
+            A repository link will be added when the software is
+            ready for public release.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-muted">
-  <div class="container">
-    <div class="card">
-      <h2>Looking Ahead</h2>
-      <p>
-        Together these projects aim to provide a coherent toolkit for Hawkes processes
-        that combines rigorous asymptotic theory, analytic formulas for dependence
-        structure, and carefully designed computational methods. My goal is to develop
-        these results into a sequence of research articles that are accessible to applied
-        probabilists and practitioners, and that support student projects at both the
-        undergraduate and graduate level.
-      </p>
-      <p>
-        A brief summary of my broader research interests is available on the
-        <a href="research.html">Research</a> page, and my curriculum vitae lists talks,
-        manuscripts in progress, and related work.
-      </p>
-    </div>
-  </div>
-</section>
+      <div class="container">
+        <div class="card">
+          <h2>Connections to Student Projects</h2>
 
+          <p>
+            These research directions offer opportunities for students
+            to explore stochastic models through simulation and
+            data analysis. Accessible starting points include
+            comparing Poisson and Hawkes processes, investigating
+            event clustering, and studying estimation accuracy
+            using simulated data.
+          </p>
+
+          <p>
+            At Augusta University, I have presented a proposed
+            master's capstone project on Hawkes process forecasting,
+            with potential applications to neural spike trains
+            and cybersecurity event logs.
+          </p>
+
+          <p>
+            Further information is available on my
+            <a href="research.html">Research</a> and
+            <a href="teaching.html">Teaching</a> pages.
+          </p>
+
+          <a href="mailto:tbhatt@augusta.edu" class="btn-link">
+            Contact me about research and student projects →
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Tekendra Bhatt</p>
+      <p>
+        &copy; <span id="year">2026</span> Tekendra Bhatt.
+        Personal academic website.
+      </p>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
 </body>
 </html>
